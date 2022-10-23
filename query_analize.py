@@ -82,7 +82,7 @@ def get_metrics():
     analize_result['MSE']= metrics(real,analize,  mod='mse')
     analize_result['MPE']= metrics(real,analize,  mod='mpe')
     analize_result['MAPE']= metrics(real,analize,  mod='mape')
-    
+    # возвращаем два результата: анализ и запросы с оценкой совпадения
     return analize_result, data
 
 
