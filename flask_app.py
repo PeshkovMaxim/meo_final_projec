@@ -57,7 +57,10 @@ def view_messages(state):
     if state == 'statistics':
         stat = query_analize.most_query(50)
         return render_template('statistics.html', most_popular=stat)
-
+    if state == 'metrics':
+        analize_result, data = query_analize.get_metrics()
+        return render_template('metrics.html', analize_result=analize_result, query=data)
+    
     return '404'
 
 
